@@ -1,0 +1,154 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Playwrite HR", cursive;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  color: #fff;
+  overflow-x: hidden;
+  background-image: linear-gradient(45deg, #f8acff, #696eff);
+}
+
+body.main {
+}
+
+body.black {
+  background-image: linear-gradient(45deg, #000, #000);
+}
+
+body.colored {
+  background-image: linear-gradient(to bottom, #91eae4, #86a8e7, #7f7fd5);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h3 {
+  font-weight: 400;
+  margin: 0;
+  font-size: 26px;
+}
+
+.styles {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.styles span {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.styles span.active {
+  border: 2px solid #eee;
+}
+
+.styles span:nth-child(1) {
+  background-image: linear-gradient(45deg, #f8acff, #696eff);
+}
+.styles span:nth-child(2) {
+  background: linear-gradient(to bottom, #91eae4, #86a8e7, #7f7fd5);
+}
+.styles span:nth-child(3) {
+  background-image: linear-gradient(90deg, #000, #fff);
+}
+
+.wrapper {
+  padding: 50px 0;
+}
+
+.btn {
+  background-color: #696eff;
+  width: fit-content;
+  padding: 7px 16px;
+  border-radius: 4px;
+  margin: 30px 0;
+  cursor: pointer;
+  border: 2px solid #fff;
+}
+
+.btn span {
+  font-size: 16px;
+}
+
+.notes {
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* flex-wrap: wrap;
+  gap: 50px; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 40px;
+}
+
+.ele {
+  position: relative;
+  max-width: 95%;
+}
+
+textarea {
+  width: 100%;
+  height: 120px;
+  resize: none;
+  padding: 10px;
+  border-radius: 4px;
+  font-family: "Roboto", sans-serif;
+  border: 2px solid #696eff;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.ele span {
+  position: absolute;
+  top: 10px;
+  right: -10px;
+  color: #000;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+}
+
+.ele span:hover {
+  opacity: 1;
+}
+
+@media (max-width: 767px) {
+  textarea {
+    width: calc(100% - 40px);
+  }
+  .ele span {
+    right: 30px;
+  }
+}
